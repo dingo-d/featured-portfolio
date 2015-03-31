@@ -1,0 +1,267 @@
+/********** Featured Gallery ************************************************************/
+
+a{
+	text-decoration: none;
+}
+
+.portfolio_item{
+	color: #929292;
+	background: #222;
+}
+
+.portfolio_item,
+.portfolio_item .overlayed{
+	position: relative; 
+	text-align: center;
+	overflow: hidden;
+	background: #222;
+}
+
+.portfolio_item h4{
+	margin: 0px 0px 27px 0px;
+	position: relative;
+	z-index: 1;
+}
+
+.portfolio_item span{
+	z-index: 1;
+	position: relative;
+}
+
+.portfolio_item h4 a{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+
+.portfolio_item h4 a:hover{
+	color: #ff503f;
+}
+
+.portfolio_item .overlayed .overlay {
+	width: 100%; 
+	height: 0%; 
+	position: absolute; 
+	overflow: hidden; 
+	bottom: 0; 
+	left: 0; 
+	background: #222; 
+	color: #fff;
+	-webkit-transition: all 300ms ease-in-out; 
+	-moz-transition: all 300ms ease-in-out; 
+	-o-transition: all 300ms ease-in-out; 
+	-ms-transition: all 300ms ease-in-out; 
+	transition: all 300ms ease-in-out;
+	z-index: 1;
+}
+
+.portfolio_item:hover .overlayed .overlay {
+		height: 37%; 
+	}
+
+.portfolio_item img{
+	width: 100%;
+	transition: transform 0.5s;
+}
+
+.portfolio_item:hover img{
+	transform: translateY(-50px);
+}
+
+.portfolio_icons_container {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	right: 7px;
+}
+
+.portfolio_icon {
+	width: 41px;
+	height: 41px;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.portfolio_icon i {
+	line-height: 41px;
+	color: #ff503f;
+	font-size: 20px;
+	display: inline;
+	-webkit-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.portfolio_item .overlayed .overlay .overlay_title{
+	font-family: sans-serif;
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 30px;
+	text-align: left;
+	margin-bottom: 3px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+.portfolio_item .overlayed .overlay .portfolio_item_tags {
+	font-family: sans-serif;
+	color: #dedede;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: left;
+	margin-left: 15px;
+}
+
+.featured_portfolio{
+	display: inline-block;
+	width: 100%;
+}
+
+.featured_portfolio .featured_item{
+	width: 25%;
+	margin: -2px;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.featured_portfolio .featured_item.current{
+	position: relative;
+}
+
+#pointer{
+	position: absolute;
+	top: -10px;
+	left: 0;
+	width: 0; 
+	height: 0; 
+	z-index: 10;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #222;
+}
+
+#portfolio_content_details{
+	background: #222;
+	width: 100%;
+	display: none;
+	position: relative;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper{
+	padding: 100px;
+	position: relative;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper #close_wrapper{
+	position: absolute;
+	display: inline-block;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+	z-index: 100;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper #close_wrapper i{
+	color: #fff;
+	font-size: 16px;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_image{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_image img{
+	width: 100%;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content{
+	width: 65.7%;
+	margin-left: 2%;
+	padding-left: 2%;
+	display: inline-block;
+	border-left: 1px solid #d3d7da;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_title{
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	color:  #fffefe;
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 26px;
+	text-align: left;
+	margin-bottom: 17px;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_linkto{
+	display: inline-block;
+	margin-left: 49px;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_linkto i{
+	font-size: 30px;
+	color: #ff503f;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_date{
+	font-family: 'Open Sans', sans-serif;
+	color:  #555555;
+	font-size: 14px; 
+	font-weight: 400;
+	line-height: 54px;
+	text-align: left;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_description{
+	margin-bottom: 38px;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_description p{
+	font-family: 'Open Sans', sans-serif;
+	color:  #cccccc;
+	font-size: 14px; 
+	font-weight: 400;
+	line-height: 22px; 
+	text-align: left;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_info{
+	margin-bottom: 50px;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_info .gallery_post_category span,
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_info .gallery_post_client span,
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_info .gallery_post_skill span{
+	font-family: 'Open Sans', sans-serif;
+	color:  #555555;
+	font-size: 14px; 
+	font-weight: 400;
+	line-height: 30px; 
+	text-align: left;
+	min-width: 100px;
+	display: inline-block;
+	margin-right: 23px;
+}
+
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_info .gallery_post_category span.cat_names,
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_info .gallery_post_client span.client_names,
+#portfolio_content_details .featured_gallery_post_wrapper .gallery_post_content .gallery_post_info .gallery_post_skill span.skills_names{
+	font-family: 'Open Sans', sans-serif;
+	color:  #cccccc;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
+	text-align: left;
+}
+
+
