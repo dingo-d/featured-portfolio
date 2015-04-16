@@ -15,12 +15,6 @@ jQuery(document).ready(function($) {
             var $this = $(this);
             leftOffset = parseInt($this.offset().left+$this.width()/2, 10);
             $('#pointer').css({'left': leftOffset, 'display': 'inline-block'});
-            $loaded_content.toggleClass("open");
-
-            if (!$this.hasClass("current")) {
-                $(".current").removeClass("current");
-                $this.addClass("current");
-            }
 
             var element_number = $this.data('number');
             var insert_after = (Math.ceil(element_number/4)*4)-1;
@@ -45,7 +39,13 @@ jQuery(document).ready(function($) {
             $loaded_content.find('.gallery_post_client .client_names').html(client);
             $loaded_content.find('.gallery_post_skill .skills_names').html(skills);
 
-            $loaded_content.slideToggle('slow');
+            if (!$this.hasClass("current")) {
+                $this.addClass("current");
+                $loaded_content.slideDown('slow').addClass("open");
+            } else{
+                $(".current").removeClass("current");
+                $loaded_content.slideUp('slow').removeClass("open");
+            }
 
             setTimeout(function(){
                 $('html, body').animate({
